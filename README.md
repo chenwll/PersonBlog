@@ -2,7 +2,7 @@
 
 # 搭建个人博客
 
-- [使用Minio搭建自己的图床](https://github.com/chenwll/PersonBlog/blob/master/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)%E2%80%94%E4%BD%BF%E7%94%A8Minio%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A.md)
+- [使用Minio搭建自己的图床](https://github.com/chenwll/PersonBlog/blob/master/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E4%BD%BF%E7%94%A8Minio%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A.md)
 
 # 前端工程化
 
@@ -19,4 +19,17 @@
 # 算法笔记
 
 # node
+
+
+
+# React
+
+- [React18中useEffect执行两次](https://github.com/chenwll/PersonBlog/blob/master/React/React18%E4%B8%ADuseEffect%E6%89%A7%E8%A1%8C%E4%B8%A4%E6%AC%A1.md)
+
+- [React18中批量更新以减少渲染次数](https://github.com/chenwll/PersonBlog/blob/master/React/React18%E4%B8%AD%E6%89%B9%E9%87%8F%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%87%8F%E5%B0%91%E6%B8%B2%E6%9F%93%E6%AC%A1%E6%95%B0.md)
+
+# TypeScript
+
+- [类型体操easy部分](https://github.com/chenwll/PersonBlog/blob/master/TypeScript/%E7%B1%BB%E5%9E%8B%E4%BD%93%E6%93%8Deasy%E9%83%A8%E5%88%86.md)
+- [逆变和协变](https://github.com/chenwll/PersonBlog/blob/master/TypeScript/%E9%80%86%E5%8F%98%E5%92%8C%E5%8D%8F%E5%8F%98.md)
 
