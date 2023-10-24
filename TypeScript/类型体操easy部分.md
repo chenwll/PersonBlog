@@ -8,11 +8,21 @@
 -   基于 infer 的模式匹配，即对一个既有类型特定位置类型的提取，比如提取函数类型签名中的返回值类型。我们将其统称为**模式匹配工具类型**。
 -   模板字符串专属的工具类型，比如神奇地将一个对象类型中的所有属性名转换为大驼峰的形式。这一类当然就统称为**模板字符串工具类型**了。
 
-# 实现Pick
-```ts
-type MyPick<T, K> = any
+# Pick
+
+`pick`的作用是从一个类型中挑选出一部分属性，然后将挑选出来的属性构造成一个新的类型。
+
+比如我们要从 `Person` 类型中挑选出其中的 `name` 属性和 `age` 属性来构造一个新的类型：
+
+```js
+interface Person {
+  name: string;
+  age: number;
+  address: string;
+}
+
+type PersonNameAndAge = Pick<Person, "name" | "age">;
 ```
-`Pick<Type, Keys>`用于构造一个类型，它是从`Type`类型里面挑了一些属性`Keys`(Keys是字符串字面量 或者 字符串字面量的联合类型), 所以Pick返回的是一个对象。
 
 改写第一步
 
@@ -46,7 +56,7 @@ type MyPick<T, K extends keyof T> = {
 }
 ```
 
-# 实现Readonly
+# Readonly
 
 直接遍历T中的属性，然后加上`readonly`关键字就好了
 
@@ -174,3 +184,51 @@ type Unshift<T  extends any[], U> = [U, ...T]
 ```ts
 type MyParameters<T extends (...args: any[]) => any> = T extends (...rest:infer P) => any ? P : undefined
 ```
+
+
+
+# record
+
+语法：Record<Keys,Type> 构造一个对象类型，其属性key是Keys,属性value是Type。被用于映射一个类型的属性到另一个类型。
+
+```js
+type petsGroup = 'dog' | 'cat' | 'fish';
+interface IPetInfo {
+    name:string,
+    age:number,
+}
+
+type IPets = Record<petsGroup, IPetInfo>;
+
+const animalsInfo:IPets = {
+    dog:{
+        name:'dogName',
+        age:2
+    },
+    cat:{
+        name:'catName',
+        age:3
+    },
+    fish:{
+        name:'fishName',
+        age:5
+    }
+}
+```
+
+```js
+type Record<K extends keyof any, T> = {
+    [P in K]: T;
+};
+```
+
+首先得知道keyof any是啥
+
+```js
+type KEY =  keyof any //即 string | number | symbol
+```
+
+因为不管什么类型，它的key总是string，number，symbol中的一种。
+
+知道了`keyof any`的作用后，后面就很好理解了，就是类型约束和类型映射一下，就完成了。
+

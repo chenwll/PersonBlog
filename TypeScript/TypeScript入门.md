@@ -216,6 +216,15 @@ namespace 是一种将相关代码组织在一起的方式，中文译为“命�
 
 
 
+# 工具类型
+
+- [typeof](https://www.51cto.com/article/711374.html)
+- 
+
+
+
+
+
 # 参考资料
 
 - https://ts.xcatliu.com/basics/declaration-files.html#declare-var)
